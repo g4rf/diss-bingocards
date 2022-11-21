@@ -2,40 +2,92 @@
 <html class="no-js" lang="">
 
 <head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
+    <!-- Place favicon.ico in the root directory -->
 
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="css/main.css">
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
-
-  <meta name="theme-color" content="#fafafa">
+    <meta name="theme-color" content="#929292">
 </head>
 
 <body>
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
-
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
+    <nav class="no-print">
+        <label>
+            <span>Überschrift</span>
+            <input type="text" class="headline" placeholder="Überschrift"
+                value="Beigeordnetenbingo" />
+        </label>
+        <label>
+            <span>Unterschrift</span>
+            <input type="text" class="subline" placeholder="Unterschrift"
+                value="zur StaDDratssitzung am 24.11.2022" />
+        </label>
+        <label>
+            <span>Beschreibung</span>
+            <textarea class="description" placeholder="Beschreibung">Sitzung verfolgen und Felder abstreichen.
+4 abgestrichene Felder waagerecht, senkrecht oder diagonal sind ein "BINGO!"</textarea>
+        </label>
+        <label>
+            <span>Feldbeschriftungen (je Zeile eine)</span>
+            <textarea class="tiles">"Ähm-Öh."
+Der OB redet von sich selbst in der 3. Person.
+"Posten- geschacher!"
+"Dresden ist nicht rot-rot-grün!"
+"Der OB spielt ein gefährliches Spiel."
+Der OB gibt sein Einvernehmen.
+Der OB gibt sein Einvernehmen nicht.
+Eine Unterbrechung wird beantragt.
+Die FDP wirft Grün-Rot-Rot vor, unkooperativ zu sein.
+Grün-Rot-Rot wirft der FDP vor, unkooperativ zu sein.
+"Uns geht es nicht um Posten."
+Die Dissidenten beantragen Vorstellung und Debatte.
+Der Dissidenten-Antrag auf Vorstellung und Debatte wird abgelehnt.
+Die Wahlen finden statt.
+Die Wahl wird vertagt.
+Die AfD lobt das Verhalten des OBs.
+Protest-Aktion im Publikum.
+Ein/e Kandidat/in erhält eine Zwei-Drittel-Mehrheit.
+"Sie schaden mit Ihrem Verhalten unserer Stadt!"
+"Verschlankung der Stadtspitze."
+Jemand erklärt die Verhandlungen für gescheitert.
+Die AfD moniert, nicht Teil der Verhandlungen zu sein.
+Die SPD betont Peter Lames hervorragende Arbeit.
+Die Fraktionsstärke der CDU ist noch zweistellig.</textarea>
+        </label>
+        <label>
+            <span>Anzahl der Karten</span>
+            <input type="number" class="quantity" value="1" min="1" />
+        </label>
+        
+        <button class="generate">Karten generieren</button>
+        
+        <ul>
+            <li>Es wird empfohlen, die Seite als PDF zu drucken, um das Ergebnis
+                besser prüfen zu können.</li>
+            <li>In den Druckeinstellungen "Querformat" einstellen.</li>
+            <li>Es werden jeweils 2 Karten auf eine A4-Seite gedruckt.</li>
+        </ul>
+        <button class="print">Drucken</button>
+    </nav>
+    
+    <cards>
+        <card class="hidden template">
+            <headline></headline>
+            <subline></subline>
+            <description></description>
+            <tiles></tiles>
+        </card>
+    </cards>
+  
+    <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="js/vendor/jquery-3.6.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
