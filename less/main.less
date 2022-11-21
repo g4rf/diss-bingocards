@@ -163,13 +163,14 @@ textarea.tiles {
 
 cards {
     grid-area: cards;
+    overflow: scroll;
 }
 
 card {
     display: inline-grid;
     grid-template:
         "headline" auto "subline" auto "description" auto
-        "tiles" auto / 100%;
+        "tiles" auto "footer" auto / 100%;
     
     margin: (@page-width * 0.05) (@page-height * 0.05);
     width: @page-width * 0.9;
@@ -186,7 +187,7 @@ card {
         justify-content: center;
         align-content: center;
         flex-direction: column;
-        padding: 0 5mm;
+        padding: 1mm 5mm;
     }
     headline {
         grid-area: headline;
@@ -201,6 +202,13 @@ card {
     description { 
         grid-area: description;
         font-size: 12pt;
+        font-weight: bold;
+    }
+    
+    footer {
+        grid-area: footer;
+        font-size: 8pt;
+        color: #fff;
         font-weight: bold;
     }
     
