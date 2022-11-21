@@ -1,5 +1,4 @@
 # diss-bingocards
 
-A bingo card generator for the Dissidenten Fraktion in Dresden. Based on 
-[BingoCardGenerator](https://github.com/cherdt/BingoCardGenerator) from
-[cherdt](https://github.com/cherdt).
+A bingo card generator for the [Dissidenten Fraktion](https://dissidenten-fraktion.de) 
+in Dresden.
